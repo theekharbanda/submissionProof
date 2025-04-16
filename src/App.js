@@ -50,8 +50,18 @@ const App = () => {
 
   return (
     <Container fluid className="py-4">
+      <div className="mb-4">
+        <a href="#" className="back-button text-decoration-none">
+          ← Back to My Jobs
+        </a>
+        <div className="d-flex justify-content-between align-items-center mt-3">
+          <h4 className="mb-0">Posk_UXdesigner_sr001</h4>
+          <span className="text-muted">{candidates.length} Candidates</span>
+        </div>
+      </div>
+
       <Row>
-        <Col md={3} className="pe-4">
+        <Col md={3} className="pe-4 border">
           {isLoading ? (
             <div className="text-center py-5">
               <Spinner animation="border" variant="primary" />
@@ -70,15 +80,15 @@ const App = () => {
           )}
         </Col>
 
-        <Col md={9}>
-          <Tabs defaultActiveKey="compare" id="candidate-tabs" className="mb-2">
+        <Col md={9} className=''>
+          <Tabs  id="candidate-tabs" className="mb-2">
             <Tab eventKey="compare" title="Compare View">
               {selectedCandidates.length > 0 ? (
-                <>
+                <div className="pt-3">
                   <Form.Control
                     type="text"
                     placeholder="Filter skills..."
-                    className="mb-2 w-25"
+                    className="mb-3 w-25"
                     value={filterText}
                     onChange={(e) => setFilterText(e.target.value)}
                   />
@@ -86,7 +96,7 @@ const App = () => {
                     candidates={selectedCandidates}
                     skills={filteredSkills}
                   />
-                </>
+                </div>
               ) : (
                 <div className="text-center py-5">
                   <h5 className="text-muted mb-3">No candidates selected</h5>
@@ -95,13 +105,13 @@ const App = () => {
               )}
             </Tab>
             <Tab eventKey="individual" title="Individual View">
-              <div className="p-4 text-center">
+              <div className="py-5 text-center">
                 <h5>Individual View</h5>
                 <p className="text-muted">Select a candidate to view detailed information</p>
               </div>
             </Tab>
             <Tab eventKey="shortlisted" title="Shortlisted Candidates">
-              <div className="p-4 text-center">
+              <div className="py-5 text-center">
                 <h5>Shortlisted Candidates</h5>
                 <p className="text-muted">Your shortlisted candidates will appear here</p>
               </div>
