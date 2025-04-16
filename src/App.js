@@ -50,15 +50,7 @@ const App = () => {
 
   return (
     <Container fluid className="py-4">
-      <div className="mb-4">
-        <a href="#" className="back-button text-decoration-none">
-          ← Back to My Jobs
-        </a>
-        <div className="d-flex justify-content-between align-items-center mt-3">
-          <h4 className="mb-0">Posk_UXdesigner_sr001</h4>
-          <span className="text-muted">{candidates.length} Candidates</span>
-        </div>
-      </div>
+    
 
       <Row>
         <Col md={3} className="pe-4">
