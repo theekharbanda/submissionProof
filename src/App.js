@@ -50,8 +50,6 @@ const App = () => {
 
   return (
     <Container fluid className="py-4">
-    
-
       <Row>
         <Col md={3} className="pe-4">
           {isLoading ? (

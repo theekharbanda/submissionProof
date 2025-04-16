@@ -1,6 +1,6 @@
 import React from 'react';
 import HeatMap from 'react-heatmap-grid';
-import { getHeatmapColor, getInitials } from '../utils/helpers';
+import {  getInitials } from '../utils/helpers';
 
 const SkillHeatmap = ({ candidates, skills }) => {
   if (!candidates.length) return null;
@@ -56,7 +56,7 @@ const SkillHeatmap = ({ candidates, skills }) => {
               justifyContent: 'flex-end'
             }}
             cellStyle={(_, value) => ({
-              background: getHeatmapColor(value),
+              background: 'green',
               width: '50px',
               height: '35px',
               margin: '0 1px',

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
-import { formatCandidateName } from '../utils/helpers';
 
 const CandidateList = ({ candidates, onAddCandidate, selectedIds }) => {
   return (
@@ -17,7 +16,7 @@ const CandidateList = ({ candidates, onAddCandidate, selectedIds }) => {
             className="d-flex justify-content-between align-items-center py-3"
           >
             <div>
-              <div>{formatCandidateName(candidate.name)}</div>
+              <div>{candidate.name}</div>
               <small className="text-muted">
                 {candidate.currentRole} • {candidate.experience}
               </small>
